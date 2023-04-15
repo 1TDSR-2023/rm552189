@@ -4,6 +4,12 @@
     box-sizing: border-box;
 }
 
+
+html{
+    font-size: 70%;
+}
+
+
 .cabecalho {
     display: flex;
     justify-content: space-between;
@@ -31,7 +37,7 @@
     font-size: 4em;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 700; /* Auementa o peso da letra*/ 
-    padding: 20% 0;
+    padding: 20% 0; /* define a distância entre um elemento e sua borda */
 }
 
 /*UTILIZA PSEUDO CLASSES PARA EFEITOS - HOVER */
@@ -42,3 +48,17 @@
     color: black;
     background-color: white;
 }
+
+
+/* body {
+    font-size: 10px;
+}
+
+.tit-foto{
+    font-size: 2rem;
+}
+
+.conteudo {
+    font-size: 4rem;
+} */
+
