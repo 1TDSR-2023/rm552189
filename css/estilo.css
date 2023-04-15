@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black; /* Definir cor de fundo */
+
+}
+
+/* .cabecalho img {
+    width: 30%;
+    max-width: 30%;
+    display: block;
+} */
