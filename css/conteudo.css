@@ -1,0 +1,23 @@
+.tit-foto {
+    font-size: 4rem;
+    text-align: center;
+    margin: 5% 0;
+}
+
+.conteudo {
+    display: flex; /* Transforma itens em linha */
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.conteudo > div img{
+    max-width: 100%;
+    display: block
+}
+
+.conteudo > div {
+    flex-grow: 1; /*Quer dizer que a taxa de crescimento é igual para todos os flex itens dentro de DIV */
+    flex-shrink: 1; /* Diz que a imagem pode encolher na taxa informada */
+    flex-basis: 300px; /*Determina valor inicial para calcular o flex de crescimento e descida */
+}

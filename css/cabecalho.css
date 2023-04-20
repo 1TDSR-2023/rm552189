@@ -1,0 +1,40 @@
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: black; /* Definir cor de fundo */
+
+}
+
+.cabecalho img {
+    width: 20%; /*Definir a largura da imagem em relação a tela, 30% da tela do dispositivo*/
+    max-width: 30%; /* Tamanho máximo do item em relação a tela, max-width só funciona em bloco */
+    display: block; /* transforma a imagem em bloco, originalmente é em linha */
+} 
+
+.cabecalho nav {
+    display: flex; /*Estamos transformando em flex, eles não estão mais em blocos e sim em linhas */
+    width: 60%; /*Determinar a largura*/
+    height: 100%; /*Determinar a linha */
+    justify-content: space-around; /*Colocar espaço entre os itens, para não ficar enorme */
+    flex-wrap: wrap; /*Quando diminuir a página, os itens irem um em baixo do outro */
+}
+
+.cabecalho a {
+    text-decoration: none; /*tirar decoração do texto, tirou o _*/
+    color: #fff; /*cor do texto*/
+    font-size: 4em;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 700; /* Auementa o peso da letra*/ 
+    padding: 15% 0; /* define a distância entre um elemento e sua borda */
+}
+
+/*UTILIZA PSEUDO CLASSES PARA EFEITOS - HOVER */
+/* QUANDO PASSAR O MOUSE EM CIMA, ELE VAI */
+
+.cabecalho a:hover{
+
+    color: black;
+    background-color: white;
+}
