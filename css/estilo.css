@@ -13,12 +13,14 @@ html{
 .cabecalho {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     align-items: center;
     background-color: black; /* Definir cor de fundo */
+
 }
 
 .cabecalho img {
-    width: 30%; /*Definir a largura da imagem em relação a tela, 30% da tela do dispositivo*/
+    width: 20%; /*Definir a largura da imagem em relação a tela, 30% da tela do dispositivo*/
     max-width: 30%; /* Tamanho máximo do item em relação a tela, max-width só funciona em bloco */
     display: block; /* transforma a imagem em bloco, originalmente é em linha */
 } 
@@ -37,7 +39,7 @@ html{
     font-size: 4em;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 700; /* Auementa o peso da letra*/ 
-    padding: 20% 0; /* define a distância entre um elemento e sua borda */
+    padding: 15% 0; /* define a distância entre um elemento e sua borda */
 }
 
 /*UTILIZA PSEUDO CLASSES PARA EFEITOS - HOVER */
@@ -47,6 +49,30 @@ html{
 
     color: black;
     background-color: white;
+}
+
+.tit-foto {
+    font-size: 4rem;
+    text-align: center;
+    margin: 5% 0;
+}
+
+.conteudo {
+    display: flex; /* Transforma itens em linha */
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.conteudo > div img{
+    max-width: 100%;
+    display: block
+}
+
+.conteudo > div {
+    flex-grow: 1; /*Quer dizer que a taxa de crescimento é igual para todos os flex itens dentro de DIV */
+    flex-shrink: 1; /* Diz que a imagem pode encolher na taxa informada */
+    flex-basis: 300px; /*Determina valor inicial para calcular o flex de crescimento e descida */
 }
 
 
