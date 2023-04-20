@@ -1,0 +1,13 @@
+/* BREAKPOINT 630px */
+
+@media(max-width:630px) {  /* em determinado tamanho que a tela atingir, ele muda o estilo */
+    .cabecalho{
+        flex-direction: column; /* Joga em coluna, 1 em baixo do outro */
+    }
+    .cabecalho nav{
+        flex-wrap: nowrap; /*tira o Wrap */
+    }
+    .cabecalho a {
+        font-size: 2em;
+    }
+}
