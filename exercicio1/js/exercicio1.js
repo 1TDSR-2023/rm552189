@@ -1,3 +1,4 @@
+//Questão 1
 let tela = document.getElementById("meu-btn")
 
 tela.addEventListener("click", function(){
@@ -12,7 +13,7 @@ tela.addEventListener("click", function(){
     botao.setAttribute("style", `background-color:rgb(${r},${g},${b});`);
 
 })
-
+//Questão 3
 let botao_imagem = document.getElementById("btn-imagem");
 
 botao_imagem.addEventListener("click", function(){
@@ -21,5 +22,10 @@ botao_imagem.addEventListener("click", function(){
 
 })
 
-// img.setAttribute('src', 'outra_imagem.png');
+//Questão 4
+let botao_html = document.getElementById("btn-mudar-html");
 
+botao_html.addEventListener("click", function(){
+    let mudar = document.querySelector("#variavel_p");
+    mudar.textContent = "Novo texto!";
+})
