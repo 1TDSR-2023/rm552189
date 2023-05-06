@@ -37,7 +37,7 @@ botao.addEventListener("click", function(){
 
 //Declarar uma Array
 
-let frutas = ["banana", "maçã", "pêssego", "laranja", "limão", "melancia", "kiwi"]
+// let frutas = ["banana", "maçã", "pêssego", "laranja", "limão", "melancia", "kiwi"]
 
 //Imprimindo o array
 
@@ -81,3 +81,18 @@ let frutas = ["banana", "maçã", "pêssego", "laranja", "limão", "melancia", "
 // console.log(frutas);
 // console.log(`O item encontrado no índice depois da remoção foi ${frutas[indice]}`);
 
+//Concatenação de arrays
+
+let nr1 = [1,2,3,4,5];
+let nr2 = [6,7,8,9,10];
+
+console.log("Array 1 : " + nr1);
+console.log("Array 2 : " + nr2);
+
+//Concatenando os dois Arrays em um novo array com o operador SRPREAD( ... )
+let nr3 = [...nr1, ...nr2];
+console.log("Array 3 : " + nr3);
+
+nr3.forEach( (nr)=>{
+    console.log("Itens do Array 3 : " + nr);
+} );
