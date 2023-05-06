@@ -18,11 +18,11 @@ let botao_formulario = document.getElementById("ReceberInfo");
 
 botao_formulario.addEventListener("click", function(){
    let email =  document.querySelector("#IdEmail");
-   let lista =  document.querySelector("#Lista");
+   let lista =  document.querySelector("#lista");
    let texto = email.value;
    let newItem = document.createElement('li');
    newItem.innerText = texto;
-
+   console.log(newItem);
    lista.appendChild(newItem);
 
 });
