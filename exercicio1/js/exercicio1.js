@@ -1,5 +1,5 @@
 //Questão 1
-let tela = document.getElementById("meu-btn")
+let tela = document.getElementById("meu-btn");
 
 tela.addEventListener("click", function(){
 
@@ -12,7 +12,7 @@ tela.addEventListener("click", function(){
 
     botao.setAttribute("style", `background-color:rgb(${r},${g},${b});`);
 
-})
+});
 //Questão 2
 let botao_formulario = document.getElementById("ReceberInfo");
 
@@ -27,15 +27,21 @@ botao_formulario.addEventListener("click", function(){
 
 });
 
-
 //Questão 3
 let botao_imagem = document.getElementById("btn-imagem");
 
 botao_imagem.addEventListener("click", function(){
     let img = document.querySelector("#imagem_lobo")
-    img.setAttribute('src', '../exercicio/img/lobo2.jpg');
 
-})
+    if (img.getAttribute("src") == './img/lobo1.jpg') {
+        let img = document.querySelector("#imagem_lobo")
+        img.setAttribute('src', './img/lobo2.jpg');
+    }
+     else {
+        let img = document.querySelector("#imagem_lobo")
+        img.setAttribute('src', './img/lobo1.jpg');
+     };
+});
 
 //Questão 4
 let botao_html = document.getElementById("btn-mudar-html");
@@ -43,13 +49,13 @@ let botao_html = document.getElementById("btn-mudar-html");
 botao_html.addEventListener("click", function(){
     let mudar = document.querySelector("#variavel_p");
     mudar.textContent = "Novo texto!";
-})
+});
 
 //Questão 5
 let botao_ocultar = document.getElementById("btn-ocultar");
 
 botao_ocultar.addEventListener("click", function(){
-    let ocultar = document.querySelector("#variavel_p");
+    let ocultar = document.querySelector("#btn-mudar-html");
     ocultar.style.display = 'none';
     
 });
