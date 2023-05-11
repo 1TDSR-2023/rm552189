@@ -34,11 +34,9 @@ botao_imagem.addEventListener("click", function(){
     let img = document.querySelector("#imagem_lobo")
 
     if (img.getAttribute("src") == './img/lobo1.jpg') {
-        let img = document.querySelector("#imagem_lobo")
         img.setAttribute('src', './img/lobo2.jpg');
     }
      else {
-        let img = document.querySelector("#imagem_lobo")
         img.setAttribute('src', './img/lobo1.jpg');
      };
 });

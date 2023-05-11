@@ -96,3 +96,4 @@ console.log("Array 3 : " + nr3);
 nr3.forEach( (nr)=>{
     console.log("Itens do Array 3 : " + nr);
 } );
+
