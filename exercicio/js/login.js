@@ -49,64 +49,73 @@ eyePass.addEventListener("click", ()=>{
 // listaDeUsuarios.push(usuario1);
 // listaDeUsuarios.push(usuario2);
 
-let listaDeUsuarios = [
-    {
-        nomeCompleto : "Lucas das Couves", 
-        emailUsuario : "lucas@email.com",
-        senhaUsuario : "123456"
-    }
-    ,
-    {
-        nomeCompleto : "Juan Pelego", 
-        emailUsuario : "juan@email.com",
-        senhaUsuario : "123456"
-    }
-    ,
-    {
-        nomeCompleto : "Caio Tulipa", 
-        emailUsuario : "tulipa@email.com",
-        senhaUsuario : "123456"
-    }
-    ,
-    {
-        nomeCompleto : "Derick Gouvea", 
-        emailUsuario : "juan@email.com",
-        senhaUsuario : "123456"
-    }
-    ,
-    {
-        nomeCompleto : "Matheuzim Danado", 
-        emailUsuario : "mateu@email.com",
-        senhaUsuario : "123456"
-    }
-    ,
-    {
-        nomeCompleto : "Leonardo Camacho", 
-        emailUsuario : "leleu@email.com",
-        senhaUsuario : "123456"
-    }
-];
+// let listaDeUsuarios = [
+//     {
+//         nomeCompleto : "Lucas das Couves", 
+//         emailUsuario : "lucas@email.com",
+//         senhaUsuario : "123456"
+//     }
+//     ,
+//     {
+//         nomeCompleto : "Juan Pelego", 
+//         emailUsuario : "juan@email.com",
+//         senhaUsuario : "123456"
+//     }
+//     ,
+//     {
+//         nomeCompleto : "Caio Tulipa", 
+//         emailUsuario : "tulipa@email.com",
+//         senhaUsuario : "123456"
+//     }
+//     ,
+//     {
+//         nomeCompleto : "Derick Gouvea", 
+//         emailUsuario : "juan@email.com",
+//         senhaUsuario : "123456"
+//     }
+//     ,
+//     {
+//         nomeCompleto : "Matheuzim Danado", 
+//         emailUsuario : "mateu@email.com",
+//         senhaUsuario : "123456"
+//     }
+//     ,
+//     {
+//         nomeCompleto : "Leonardo Camacho", 
+//         emailUsuario : "leleu@email.com",
+//         senhaUsuario : "123456"
+//     }
+// ];
+
+
+// localStorage.setItem( "lista-user", JSON.stringify(listaDeUsuarios));
+
 
 
 const botaoSubmit = document.querySelector("#btnSubmit");
 
 botaoSubmit.addEventListener("click", ()=> {
     
-    //Criando objeto de validação
-    let userValidado = {
-        emailUsuarioValidado : inputEmail.value,
-        senhaUsuarioValidado : inputSenha.value
+    //Criando um objeto USUÁRIO LOGADO
+    let userLogado = {
+        emailUsuarioLogado : inputEmail.value,
+        senhaUsuarioLogado : inputSenha.value
     };
 
+    let userValidado = [
+        
+    ];
 
 try{
 
- //Criando iteração
-    //Realizar validação com usuário informado
+
+    //RECUPERANDO DO LOCAL STORAGE
+    let listaDeUsuarios = JSON.parse(localStorage.getItem("lista-user"));
+
     listaDeUsuarios.forEach((usuario)=>{
         //Realizando a validação
         //Comparando cada objeto da lista com o objeto montado com os dados que vieram do formulário
-        if(userValidado.emailUsuarioValidado == usuario.emailUsuario && userValidado.senhaUsuarioValidado == usuario.senhaUsuario){
+        if(userLogado.emailUsuarioLogado == usuario.emailUsuario && userLogado.senhaUsuarioLogado == usuario.senhaUsuario){
             userValidado = usuario
             throw "VALIDADO";
         }
@@ -121,10 +130,18 @@ try{
         msgStatus.setAttribute("style","color:#00ff00");
         msgStatus.innerHTML = `<span><strong>Usuário: ${userValidado.nomeCompleto}</strong></span>`;
 
+        //Adicionando  o usuário validado no local storage.
+        localStorage.setItem("user-validado", JSON.stringify(userValidado));
+
+        const token = Math.random().toString(16).substring(2)+Math.random().toString(16).substring(2);
+
+        localStorage.setItem("user-token", token);
+
+        //redirect
         setTimeout(()=> {
             window.location.href = "../exercicio/home.html";
         },3000);
-        //redirect
+        
 
         
     } else{
